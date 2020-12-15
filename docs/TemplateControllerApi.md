@@ -1,0 +1,152 @@
+# \TemplateControllerApi
+
+All URIs are relative to *https://api.mailslurp.com*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**create_template**](TemplateControllerApi.md#create_template) | **Post** /templates | Create a Template
+[**delete_template**](TemplateControllerApi.md#delete_template) | **Delete** /templates/{TemplateId} | Delete Template
+[**get_all_templates**](TemplateControllerApi.md#get_all_templates) | **Get** /templates/paginated | Get all Templates in paginated format
+[**get_template**](TemplateControllerApi.md#get_template) | **Get** /templates/{TemplateId} | Get Template
+[**get_templates**](TemplateControllerApi.md#get_templates) | **Get** /templates | Get all Templates
+
+
+
+## create_template
+
+> crate::models::TemplateDto create_template(create_template_options)
+Create a Template
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**create_template_options** | [**CreateTemplateOptions**](CreateTemplateOptions.md) | createTemplateOptions | [required] |
+
+### Return type
+
+[**crate::models::TemplateDto**](TemplateDto.md)
+
+### Authorization
+
+[API_KEY](../README.md#API_KEY)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## delete_template
+
+> delete_template(template_id)
+Delete Template
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**template_id** | [**String**](.md) | TemplateId | [required] |
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[API_KEY](../README.md#API_KEY)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## get_all_templates
+
+> crate::models::PageTemplateProjection get_all_templates(page, size, sort)
+Get all Templates in paginated format
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**page** | Option<**i32**> | Optional page index in inbox list pagination |  |[default to 0]
+**size** | Option<**i32**> | Optional page size in inbox list pagination |  |[default to 20]
+**sort** | Option<**String**> | Optional createdAt sort direction ASC or DESC |  |[default to ASC]
+
+### Return type
+
+[**crate::models::PageTemplateProjection**](PageTemplateProjection.md)
+
+### Authorization
+
+[API_KEY](../README.md#API_KEY)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## get_template
+
+> crate::models::TemplateDto get_template(template_id)
+Get Template
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**template_id** | [**String**](.md) | TemplateId | [required] |
+
+### Return type
+
+[**crate::models::TemplateDto**](TemplateDto.md)
+
+### Authorization
+
+[API_KEY](../README.md#API_KEY)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## get_templates
+
+> Vec<crate::models::TemplateProjection> get_templates()
+Get all Templates
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**Vec<crate::models::TemplateProjection>**](TemplateProjection.md)
+
+### Authorization
+
+[API_KEY](../README.md#API_KEY)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
